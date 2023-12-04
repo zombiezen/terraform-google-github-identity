@@ -16,7 +16,7 @@ provider "google" {
 
 module "github_identity_pool" {
   source  = "zombiezen/github-identity/google"
-  version = "0.1.0"
+  version = "0.1.1"
 
   attribute_condition = "assertion.repository=='octocat/example'"
 
