@@ -1,0 +1,3 @@
+{
+  terraform = import ./terraform.nix;
+}
