@@ -83,5 +83,5 @@ resource "google_service_account_iam_member" "impersonation" {
   for_each           = var.service_accounts
   service_account_id = each.value.service_account_name
   role               = "roles/iam.workloadIdentityUser"
-  member             = "principal://iam.googleapis.com/${google_iam_workload_identity_pool.main.name}/${each.value.subject}"
+  member             = "principal://iam.googleapis.com/${google_iam_workload_identity_pool.main.name}/subject/${each.value.subject}"
 }
